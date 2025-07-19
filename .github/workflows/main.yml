@@ -14,11 +14,12 @@ jobs:
             - name: Exibindo o output da action exemplo output
               run: echo  "${{ steps.exemplo-output.outputs.action_random}}"  
             - name: Gerador de senha
+              uses: actions/checkout@v2
               id: generatedpassword
               uses: aammirmirza/RandomPasswordGenerator@v1.1
               with:
                 length: 15
-            - name: Exbindo o output da action de password
-              run: echo "${{ steps.generatedpassword.outputs.password }}"
+              run: echo "${{ steps.generated-password.outputs.password }}"
+              shell: bash
 
                 
