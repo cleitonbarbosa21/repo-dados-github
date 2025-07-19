@@ -36,5 +36,5 @@ on:
                     echo "A versão é: ${{ inputs.versao}}                    
                     echo "O Card é: ${{ inputs.numero_card}}    
                     echo "Deve fazer deploy: ${{ inputs.fazer_deploy}}   
-                    echo "O Ambiente é: ${{ inputs.ambiente}}                
+                    echo "O Ambiente é: ${{ inputs.ambiente}}            
 
