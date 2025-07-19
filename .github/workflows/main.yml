@@ -20,6 +20,6 @@ jobs:
                 length: 15
             - name: Exibindo o output da action password
               run: echo "${{ steps.generated-password.outputs.password }}"
-              shell: bash
+              
 
                 
