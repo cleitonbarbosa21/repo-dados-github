@@ -5,6 +5,8 @@ on:
 jobs:
     gerando_output:
         runs-on: ubuntu-latest
+        outputs:
+          output-shell: ${{steps.exemplo-output.action_random}}
         steps:
             - name: Gerando output com shell
               id: exemplo-output
@@ -13,13 +15,12 @@ jobs:
                 echo "action_random=$ACTION_RANDOM" >> $GITHUB_OUTPUT
             - name: Exibindo o output da action exemplo output
               run: echo  "${{ steps.exemplo-output.outputs.action_random}}"  
-            - uses: actions/checkout@v2
-              id: generatedpassword
-              uses: aammirmirza/RandomPasswordGenerator@v1.1
-              with:
-                length: 15
-            - name: Exibindo o output da action password
-              run: echo "${{ steps.generatedpassword.outputs.password }}"
-              
-
+    exibindo-valores:
+        needs: gerando_output
+        runs-on: ubuntu-latest
+        steps:
+            - name: Exibindo os outputs do gerando_output
+              run: |
+                echo "Output Shell: ${{ needs.gerando_output.outputs.output-shell}}"
+    
                 
