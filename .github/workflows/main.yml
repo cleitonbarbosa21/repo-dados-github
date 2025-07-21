@@ -20,7 +20,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Exibindo os outputs do gerando_output
-              run: 
+              run: |
                 echo "Output Shell: ${{ needs.gerando_output.outputs.output-shell }}"
     
                 
