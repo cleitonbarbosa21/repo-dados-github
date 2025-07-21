@@ -14,7 +14,7 @@ jobs:
                 ACTION_RANDOM=$(( $RANDOM ))
                 echo "action_random=$ACTION_RANDOM" >> $GITHUB_OUTPUT
             - name: Exibindo o output da action exemplo output
-              run: echo  "${{ steps.exemplo-output.outputs.action_random}}"  
+              run: echo "${{ steps.exemplo-output.outputs.action_random }}"  
     exibindo-valores:
         needs: [gerando_output]
         runs-on: ubuntu-latest
