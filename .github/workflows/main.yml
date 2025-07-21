@@ -21,6 +21,7 @@ jobs:
         steps:
             - name: Exibindo os outputs do gerando_output
               run: |
-                echo "Output Shell: ${{ needs.gerando_output.outputs.output-shell }}"
+                  echo "Output Shell: ${{ needs.gerando_output.outputs.output-shell }}"
+                
     
                 
