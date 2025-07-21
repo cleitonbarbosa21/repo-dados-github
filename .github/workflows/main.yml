@@ -6,7 +6,7 @@ jobs:
     gerando_output:
         runs-on: ubuntu-latest
         outputs:
-          output-shell: ${{steps.exemplo-output.action_random}}
+          output-shell: ${{  steps.exemplo-output.action_random  }}
         steps:
             - name: Gerando output com shell
               id: exemplo-output
